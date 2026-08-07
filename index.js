@@ -1,7 +1,7 @@
 // EXEMPLO 1
 
 //const aluno = {
-//      nome: "John",
+//    nome: "John",
 //    idade: 17,
 //    curso: "Desenvolvimento de Sistemas"
 //}
