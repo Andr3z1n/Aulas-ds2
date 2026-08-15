@@ -1,13 +1,4 @@
-//Abstração no mundo real
-//Imagine um carro.
-
-//Para dirigir um carro, você utiliza:
-
-volante
-pedais
-câmbio
-
-//📌 Exemplo 1 — Sem abstração
+// Exemplo 1 — Sem abstração
 //Imagine que tentássemos representar absolutamente todas as características de um carro:
 
 const carro = {
@@ -26,13 +17,21 @@ const carro = {
     quantidadePortas: 4
 }
 
-//Existe muita informação.
+//Exemplo 2 — Aplicando abstração
+//Se o objetivo for controlar um estacionamento, talvez seja suficiente:
 
-//Mas será que um sistema de estacionamento precisa conhecer todas essas informações?
+class Carro {
 
-//Provavelmente não.
+    constructor(placa, modelo, cor) {
+        this.placa = placa
+        this.modelo = modelo
+        this.cor = cor
+    }
 
-//Exemplo 2-🧩 Abstração depende do contexto
+}
+
+//Exemplo 3
+//-Abstração depende do contexto
 //A mesma entidade pode possuir diferentes representações.
 
 //Por exemplo, um Carro em um sistema de estacionamento:
@@ -45,8 +44,8 @@ class Carro {
 
 }
 
+//Exemplo 4
 //Já em um sistema de oficina mecânica:
-
 class Carro {
     constructor(placa, modelo, quilometragem, motor) {
         this.placa = placa
@@ -57,9 +56,7 @@ class Carro {
 
 }
 
-//Não existe necessariamente uma única classe Carro correta.
-
-//📌 Exemplo 3 — Sistema de banco
+//Exemplo 5 — Sistema de banco
 //Um cliente de banco possui muitas informações.
 
 //Porém, para um determinado sistema, podemos trabalhar com:
@@ -72,8 +69,6 @@ class Conta {
     }
 
 }
-
-//Não precisamos representar todos os detalhes da pessoa para trabalhar com a conta.
 
 //⚠️ Erro comum
 //❌ Confundir abstração com apagar informações
@@ -93,8 +88,6 @@ class Aluno {
 }
 
 //Se o sistema é responsável por controlar notas, talvez seja necessário adicionar outras informações.
-
-//A abstração depende dos requisitos do sistema.
 
 //📌 Abstração e Classes
 //As classes são uma ferramenta importante para implementar abstrações.
